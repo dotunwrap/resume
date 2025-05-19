@@ -5,7 +5,7 @@
 == Education
 #chiline()
 
-#degree("The Ohio State University", "Bachelor of Arts in Computer and Information Science", "Expected May 2025")
+#degree("The Ohio State University", "Bachelor of Arts in Computer and Information Science", "May 2025")
 
 == Experience
 #chiline()
@@ -16,7 +16,7 @@
   "Austin, Texas",
   "May-August 2024",
   (
-    "Engineered a stealthy LDAP tool in python, building eight communication layers and authentication mechanisms from the ground up.  Developed a stand alone tool compatible with the well known impacket tool set.",
+    "Engineered a stealthy LDAP tool in python, building eight communication layers and authentication mechanisms from the ground up. Developed a stand alone tool compatible with the well known impacket tool set.",
     "Worked with senior pentesters during live engagements to identify and exploit vulnerabilities.",
   ),
 )
