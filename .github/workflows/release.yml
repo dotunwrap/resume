@@ -44,7 +44,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.get-sha.outputs.tag_name }}
-          release_name: "Release ${{ steps.get-sha.outputs.tag_name }}"
+          name: "Release ${{ steps.get-sha.outputs.tag_name }}"
           generate_release_notes: true
           files: |
             resume-${{ steps.get-sha.outputs.tag_name }}.pdf
