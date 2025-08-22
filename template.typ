@@ -67,7 +67,7 @@
   let links = resolve("links")
 
   // Document setup
-  set document(author: author, title: "Resume", date: datetime.today())
+  set document(author: author, title: "Garrett-Simpson-Software-Engineer-Resume", date: datetime.today())
   set text(size: 11pt, lang: "en")
   set page(margin: 2.5em)
   set par(justify: true)
@@ -169,32 +169,6 @@
   ]
 }
 
-/// Creates a skills section with customizable skill categories
-///
-/// This function formats a skills section with multiple categories,
-/// each containing a list of skills or technologies.
-///
-/// ```example
-/// #skills-section((
-///    "Programming Languages": "Python, Golang, Zig, C, Terraform",
-///    "Tools & Frameworks": "Ghidra, Pwntools, AWS, WireShark",
-/// ))
-/// ```
-///
-/// A formatted block containing the skills categorized in a list
-/// -> content
-#let skills-section(
-  /// A dictionary where keys are category names and values are the skills
-  /// -> dictionary
-  categories,
-) = {
-  block[
-    #for (category, skills) in categories.pairs() [
-      - #text(weight: "bold", category + ": ") #skills
-    ]
-  ]
-}
-
 /// Creates an education entry with institution, degree, and details
 ///
 /// This function formats an education entry with university name,
@@ -235,3 +209,60 @@
     )
   ]
 }
+
+#let project(
+  /// The title of the project
+  /// -> string
+  title: none,
+  /// The repository link
+  /// -> string
+  link: none,
+  /// An array of bullet point descriptions
+  /// -> array
+  bullets: (),
+) = {
+  block(spacing: 1em)[
+    #grid(
+      columns: 1fr,
+      rows: 2,
+      row-gutter: 0.1em,
+      inset: (top: 0.3em),
+      text(weight: "bold", title),
+      link,
+    )
+
+    #if bullets.len() > 0 {
+      pad(
+        left: 0.5em,
+        list(..bullets.map(bullet => [#bullet])),
+      )
+    }
+  ]
+}
+
+/// Creates a skills section with customizable skill categories
+///
+/// This function formats a skills section with multiple categories,
+/// each containing a list of skills or technologies.
+///
+/// ```example
+/// #skills-section((
+///    "Programming Languages": "Python, Golang, Zig, C, Terraform",
+///    "Tools & Frameworks": "Ghidra, Pwntools, AWS, WireShark",
+/// ))
+/// ```
+///
+/// A formatted block containing the skills categorized in a list
+/// -> content
+#let skills-section(
+  /// A dictionary where keys are category names and values are the skills
+  /// -> dictionary
+  categories,
+) = {
+  block[
+    #for (category, skills) in categories.pairs() [
+      - #text(weight: "bold", category + ": ") #skills
+    ]
+  ]
+}
+

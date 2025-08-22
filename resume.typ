@@ -2,82 +2,78 @@
 
 #show: resume.with()
 
-#section("Education")
-
-#education(
-  institution: "The Ohio State University",
-  degree: "Bachelor of Arts in Computer and Information Science",
-  date: "2020 - 2025",
-)
-
 #section("Experience")
 
 #entry(
-  organization: "IBM X-Force Red",
-  title: "Pentest Intern",
-  location: "Austin, Texas",
-  date: "May-August 2024",
+  organization: "MedShift",
+  title: "Software Engineer III",
+  location: "Charlotte, NC",
+  date: "May 2024 - Present",
   bullets: (
-    [Engineered a stealthy LDAP tool in python, #link("https://github.com/logangoins/soapy", "soapy"), building eight communication layers and authentication mechanisms from the ground up. Developed a stand alone tool compatible with the well known impacket tool set.],
-    [Worked with senior pentesters during live engagements to identify and exploit vulnerabilities.],
+    [Developed two B2B medtech SPAs using Python, Django, Django REST Framework, Vue, React, and Tailwind.],
+    [Owned client onboarding and custom development initiatives end-to-end, streamlining processes to reduce time-to-onboard from weeks to days.],
+    [Led end-to-end custom integrations with partner APIs (e.g., Stripe, Firebase, Metabase), implementing idempotent workflows to ensure reliable, repeatable data syncs.],
   ),
 )
 
 #entry(
-  organization: "IBM X-Force Red",
-  title: "Pentest Intern",
-  location: "Austin, Texas",
-  date: "May-August 2023",
+  organization: "Punchmark",
+  title: "Full Stack Engineer",
+  location: "Charlotte, NC",
+  date: "June 2021 - May 2024",
   bullets: (
-    [Worked in team to develop a C2 system using ETW for opportunistic traffic capture on Windows devices, enabling covert communication without direct socket use. Presented a proof of concept to IBM executives.],
-    [Shadowed experienced pentesters on app and internal network penetration tests, gaining valuable insights.],
-    [Completed series of expert-led, training programs focused on network penetration, web application security, cryptography, social engineering, and mobile application security.],
+    [Drove development for an e-commerce platform using PHP, JavaScript (React), and Sass in a small team environment.],
+    [Managed end-to-end platform operations including DevOps, security, and database administration.],
+    [Led incident response to a critical security breach from investigation to implementation, delivering an entire authentication service overhaul within two weeks.],
+    [Investigated and resolved security vulnerabilities using Burp Suite.],
+    [Owned development of an extendable data-ingestion framework capable of efficiently handling terabytes of data per hour, resulting in a greater than 50% increase in performance.],
+    [Orchestrated cloud deployments on AWS with Ansible and Docker.]
   ),
 )
 
-#entry(
-  organization: "The Ohio State University Athletics Department",
-  title: "IT Student Intern",
-  location: "Columbus, Ohio",
-  date: "May 2022 - August 2022",
-  bullets: (
-    [Developed processes to track and document vulnerability remediation across four thousand devices.],
-    [Worked with the myriad of tools used to secure and manage large enterprise environments including CrowdStrike, Qualys, and the SolarWinds suite.],
-  ),
-)
+#section("Education")
 
-#section("Extracurricular")
-
-#entry(
-  organization: "OSU Cyber Security Club",
-  title: "Vice President / Member",
-  location: "Columbus, Ohio",
-  date: "August 2020 - Present",
-  bullets: (
-    [Member of the winning RIT ISTS 2022 team, an attack-defense cybersecurity competition. Competed in ISTS from 2022 to 2024.],
-    [Led meetings, managed AWS infrastructure using Terraform, and coordinated BuckeyeCTF, organizing participation for thousands annually.],
-    [Participated in the Cyber Truck Challenge 2022, working in a six-person team to map and attack heavy truck engine control units, communication networks, and cyber-physical systems. Presented findings and vulnerabilities to OEMs.],
-    [Collaborated with the Truck Cybersecurity Research Group to develop attack methodologies for Engine Control Units.],
-    [Designed Python network support for J1939 intelligent fuzzers and J1939 Transport Protocol.],
-  ),
-)
-
-#entry(
-  organization: "US National Team",
-  title: "Athletics Experience, Target Pistol Shooting",
-  location: "OSU Varsity Athlete",
-  date: "August 2016 - 2024",
-  bullets: (
-    [2020 Tokyo Olympian, Rapid Fire Pistol],
-    [Dedicated 20+ hours a week to training and practice while maintaining a full academic course load.],
-    [2021, 2022, 2023, 2024 All-American, OSU Scholar Athlete.],
-    [2018 CAT Games Mexico, 2018 South Korea World Championship team, 2019 Pan-American Games Lima.],
-  ),
+#education(
+  institution: "Rowan-Cabarrus Community College",
+  degree: "Associate of Applied Science",
+  date: "August 2016 - May 2020",
 )
 
 #section("Skills")
 
 #skills-section((
-  "Programming Languages": "Python, Golang, Zig, C, Terraform",
-  "Tools & Frameworks": "Ghidra, Pwntools, AWS, WireShark",
+  "Programming Languages": "Rust, Python, JavaScript, TypeScript, Go",
+  "Frameworks": "Vue, React, Svelte, Django, Axum",
+  "Databases": "PostgreSQL, MySQL, SQLite, MongoDB",
+  "Cloud": "AWS, GCP",
+  "Tools": "Terraform, Ansible, Docker",
 ))
+
+#section("Projects")
+
+#project(
+  title: "DM Helper",
+  link: "github.com/dotunwrap/dm-helper",
+  bullets: (
+    [Designed an interactive Discord bot for managing Dungeons and Dragons (D&D) campaigns and scheduling.],
+    [Utilized async Rust and PostgreSQL with an ORM to create a robust and extensible solution.],
+  )
+)
+
+#project(
+  title: "Goldbach's Conjecture Solver",
+  link: "github.com/dotunwrap/goldbachs-conjecture-solver",
+  bullets: (
+    [Developed a command-line tool for attempting to solve Goldbach's Conjecture using Rust.],
+    [Implemented both Sieve of Eratosthenes and Sieve of Atkin algorithms for efficient prime number generation.],
+  )
+)
+
+#project(
+  title: "Hangul Recognition Test",
+  link: "github.com/dotunwrap/hangul-recognition",
+  bullets: (
+    [Created a web app for testing hangul recognition in TypeScript using Vue's Options API.],
+    [Deployed on GitHub Pages using GitHub Actions.]
+  )
+)
