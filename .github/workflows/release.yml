@@ -31,7 +31,7 @@ jobs:
             --input phone=${{ vars.PHONE }} \
             --input email=${{ vars.EMAIL }} \
             --input links=${{ vars.LINKS }} \
-            --format pdf garrett-simpson-software-engineer-resume.pdf
+            --format pdf ${{ vars.FILE_NAME }}.pdf
 
           nix develop --command typst compile resume.typ \
             --input title=${{ vars.TITLE }} \
@@ -39,7 +39,7 @@ jobs:
             --input phone=${{ vars.PHONE }} \
             --input email=${{ vars.EMAIL }} \
             --input links=${{ vars.LINKS }} \
-            --format png garrett-simpson-software-engineer-resume.png --pages 1
+            --format png ${{ vars.FILE_NAME }}.png --pages 1
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
@@ -47,5 +47,5 @@ jobs:
           name: ${{ steps.get-date.outputs.today }}
           generate_release_notes: true
           files: |
-            garrett-simpson-software-engineer-resume.pdf
-            garrett-simpson-software-engineer-resume.png
+            ${{ vars.FILE_NAME }}.pdf
+            ${{ vars.FILE_NAME }}.png
