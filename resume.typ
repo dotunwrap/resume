@@ -5,10 +5,18 @@
 #section("Experience")
 
 #entry(
+  organization: "Red Ventures",
+  title: "Software Engineer",
+  location: "Charlotte, NC",
+  date: "October 2025 - Present",
+  bullets: (),
+)
+
+#entry(
   organization: "MedShift",
   title: "Software Engineer III",
   location: "Charlotte, NC",
-  date: "May 2024 - Present",
+  date: "May 2024 - October 2025",
   bullets: (
     [Developed two B2B medtech SPAs using Python, Django, Django REST Framework, Vue, React, and Tailwind.],
     [Owned client onboarding and custom development initiatives end-to-end, streamlining processes to reduce time-to-onboard from weeks to days.],
